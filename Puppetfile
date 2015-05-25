@@ -29,6 +29,11 @@ mod 'firewall',
 mod 'rpdemo',
     :git => 'git@github.com:nikogura/rpdemo.git',
     :ref => '1.0.0'
+
 mod 'selinux',
     :git => 'git@github.com:spiette/puppet-selinux.git',
     :ref => 'v0.5.3'
+
+mod 'puppetjenkins',
+    :git => 'git@github.com:nikogura/puppetjenkins.git',
+    :ref => '1.0.0'
