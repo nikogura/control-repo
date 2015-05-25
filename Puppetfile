@@ -29,3 +29,7 @@ mod 'firewall',
 mod 'selinux',
     :git => 'git@github.com:spiette/puppet-selinux.git',
     :ref => 'v0.5.3'
+
+mod 'rpdemo',
+    :git => 'git@github.com:nikogura/rpdemo.git',
+    :ref => '1.0.0'
