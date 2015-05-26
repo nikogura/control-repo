@@ -36,7 +36,7 @@ mod 'selinux',
 
 mod 'puppetjenkins',
     :git => 'git@github.com:nikogura/puppetjenkins.git',
-    :ref => '1.0.2'
+    :ref => '1.0.3'
 
 mod 'git',
     :git => 'git@github.com:puppetlabs/puppetlabs-git.git',
