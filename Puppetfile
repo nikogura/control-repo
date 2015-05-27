@@ -36,7 +36,7 @@ mod 'selinux',
 
 mod 'cdpuppet',
     :git => 'git@github.com:nikogura/cdpuppet.git',
-    :ref => '1.1.7'
+    :ref => '1.1.8'
 
 mod 'git',
     :git => 'git@github.com:puppetlabs/puppetlabs-git.git',
