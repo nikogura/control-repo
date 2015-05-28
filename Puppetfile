@@ -44,6 +44,6 @@ mod 'jenkins',
 
 mod 'cdpuppet',
     :git => 'git@github.com:nikogura/cdpuppet.git',
-    :ref => '1.2.7'
+    :ref => '1.2.8'
 
 
