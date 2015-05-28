@@ -1,4 +1,49 @@
 {
   "foo": "bar",
-  "cdpuppet::profile::puppetmaster::cron::sync_interval": "*"
+  "cdpuppet::profile::puppetmaster::cron::sync_interval": "*",
+  "cdpuppet::profile::puppetmaster::puppet_data": {
+    "main": {
+      "logdir": "/var/log/puppet",
+      "rundir": "/var/run/puppet",
+      "ssldir": "$confdir/ssl",
+      "environmentpath": "$confdir/environments",
+      "basemodulepath": "$confdir/modules:/usr/share/puppet/modules",
+      "environment_timeout": 0,
+      "certname": "puppetmaster.local"
+    },
+    "master": {
+      "autosign": "/etc/puppet/autosign.conf",
+      "dns_alt_names":"puppet,puppet.local,puppetmaster.local",
+      "reports": "store"
+    },
+    "agent": {
+      "classfile": "$vardir/classes.txt",
+      "localconfig": "$vardir/localconfig"
+    }
+  },
+  "cdpuppet::profile::puppetmaster::hiera_data": {
+    ":backends": [
+      "json"
+    ],
+    ":hierarchy": [
+      "datagroup/puppetmaster",
+      "global"
+    ],
+    ":json": {
+      ":datadir": "/etc/puppet/enviornments/%{::environment}/hiera"
+    }
+  },
+  "cdpuppet::profile::puppetmaster::r10k_data": {
+    "postrun": [
+      "/usr/bin/ruby",
+      "/etc/puppet/bin/r10k_postrun.rb"
+    ],
+    "sources": {
+      "dynamic": {
+        "remote": "git@github.com:nikogura/control-repo.git",
+        "basedir": "/etc/puppet/environments"
+      }
+    }
+
+  }
 }
