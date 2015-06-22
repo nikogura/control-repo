@@ -30,7 +30,7 @@
       "global"
     ],
     ":json": {
-      ":datadir": "/etc/puppet/environments/%{::environment}/hiera"
+      ":datadir": "/etc/puppet/environments/%\\{::environment\\}/hiera"
     }
   },
   "cdpuppet::profile::puppetmaster::r10k_data": {
