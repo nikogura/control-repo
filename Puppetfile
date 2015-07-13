@@ -45,3 +45,7 @@ mod 'jenkins',
 mod 'cdpuppet',
     :git => 'git@github.com:nikogura/cdpuppet.git',
     :ref => '1.1.9'
+    
+mod 'releasemanager',
+    :git => 'git@github.com:DataRecognitionCorporation/releasemanager.git',
+    :ref => 'puppet-integration'
